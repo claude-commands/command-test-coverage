@@ -12,12 +12,14 @@ Analyze test coverage for the entire project.
 **Usage:** `/test-coverage [file-or-directory]`
 
 **Examples:**
+
 - `/test-coverage` - Full project coverage analysis
 - `/test-coverage src/` - Coverage for src directory
 - `/test-coverage src/auth.ts` - Coverage for specific file
 - `/test-coverage --generate` - Generate tests for uncovered code
 
 **Workflow:**
+
 1. Detect test framework and coverage tool
 2. Run coverage analysis
 3. Identify coverage gaps
@@ -57,27 +59,32 @@ Analyze coverage for the specified scope and optionally generate tests.
 2. **Run Coverage Analysis**
 
    **Node.js (Jest)**:
+
    ```bash
    npx jest --coverage --coverageReporters=json-summary --coverageReporters=text 2>/dev/null
    ```
 
    **Node.js (Vitest)**:
+
    ```bash
    npx vitest run --coverage --reporter=json 2>/dev/null
    ```
 
    **Go**:
+
    ```bash
    go test -coverprofile=coverage.out ./...
    go tool cover -func=coverage.out
    ```
 
    **Python**:
+
    ```bash
    pytest --cov=. --cov-report=term-missing --cov-report=json 2>/dev/null
    ```
 
    **Rust**:
+
    ```bash
    cargo tarpaulin --out Json 2>/dev/null
    ```

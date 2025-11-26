@@ -14,7 +14,7 @@ ln -s <clone-path>/command-test-coverage/test-coverage.md ~/.claude/commands/tes
 
 ## Usage
 
-```
+```text
 /test-coverage              # Full project coverage analysis
 /test-coverage src/         # Coverage for specific directory
 /test-coverage --generate   # Generate tests for uncovered code
